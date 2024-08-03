@@ -6,7 +6,8 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./data/GameData.bin:/app/GameData.bin
-      - ./data/GameData.bin:/app/GameDataDefault.bin
+      - ./data/GameDataDefault.bin:/app/GameDataDefault.bin
       - ./data/SaveData.json:/app/SaveData.json
+      - ./data/Config.json:/app/Config.json
     ports:
       - 7089:7089
