@@ -68,6 +68,7 @@ void ServerSaveData::load()
         enet::Console::log("No save file exists. Creating new save file.");
         enet::Console::log("No shared save file exists. Loading default.");
         loadSharedDefault();
+        save();
         return;
     }
     std::string file = readStringFromFile(sSaveDataFile);
