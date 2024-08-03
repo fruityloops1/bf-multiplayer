@@ -10,6 +10,14 @@ Server: Build using CMake on a POSIX system:
 - Make sure to cd into the `server` directory
 - `mkdir build && cd build && cmake ..`
 - `make`
+
+Server: Build using CMake on a Windows system:
+- Install Clang/LLVM >= 14
+- Download Ninja
+- Make sure to cd into the `server` directory
+- `mkdir build && cd build`
+- `cmake .. -DCMAKE_C_COMPILER="clang" -DCMAKE_CXX_COMPILER="clang++" -GNinja -D"CMAKE_MAKE_PROGRAM:PATH=C:/path/to/ninja.exe"` (replace C:/path/to/ninja.exe with your path)
+- `cd .. && ninja -C build`
 ## Install
 - Make sure to use Bowser's Fury 1.1 (latest version)
 - Put contents of the `sd` folder onto the root of SD card
