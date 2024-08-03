@@ -5,6 +5,7 @@
 
 ## Build
 Mod: Install devkitPro and run `make`
+
 Server: Build using CMake on a POSIX system
 ## Install
 - Make sure to use Bowser's Fury 1.1 (latest version)
