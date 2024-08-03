@@ -5,9 +5,9 @@
 #include "pe/Enet/Packets/DataPackets.h"
 #include "pe/Enet/Server.h"
 #include "pe/ServerUtil.h"
-#include <arpa/inet.h>
 #include <cstdio>
 #include <thread>
+#include "pe/Util.h"
 
 namespace pe {
 namespace enet {
@@ -17,7 +17,8 @@ namespace enet {
         , mPeer(peer)
     {
         ENetAddress address = peer->address;
-        Console::log("New client connected from %s:%u (%zx)", inet_ntoa(in_addr { address.host }), address.port, getHash());
+
+        Console::log("New client connected from %s:%u (%zx)", pe::InetNtoa(address.host), address.port, getHash());
     }
 
     void Client::sendPacket(IPacket* packet, bool reliable)

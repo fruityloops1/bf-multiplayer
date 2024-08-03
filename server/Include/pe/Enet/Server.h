@@ -35,7 +35,7 @@ namespace enet {
         Client* mCurrentSaveDataUploader = nullptr;
         bool mSaveDataAck[8] { false };
         size_t mSharedSaveWorkBufferSize = 0;
-        uint8_t mSharedSaveWorkBuffer[std::numeric_limits<uint16_t>::max() + 0x100];
+        uint8_t mSharedSaveWorkBuffer[(std::numeric_limits<uint16_t>::max)() + 0x100];
 
         void threadFunc();
         void fail(const char* msg);

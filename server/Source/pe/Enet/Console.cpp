@@ -7,7 +7,7 @@
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
-#include <string>
+#include "pe/Util.h"
 
 namespace pe {
 namespace enet {
@@ -52,7 +52,7 @@ namespace enet {
                     for (auto entry : mServer->mClients) {
                         Client& client = entry.second;
                         printf("%s:\n", client.mName);
-                        printf("  Connection: %s:%d\n", inet_ntoa(in_addr { client.mPeer->address.host }), client.mPeer->address.port);
+                        printf("  Connection: %s:%d\n", pe::InetNtoa(client.mPeer->address.host), client.mPeer->address.port);
                         printf("  User ID: ");
                         PE_PRINT_UUID(client.mUid, printf);
                         printf("\n");

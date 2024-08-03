@@ -3,6 +3,7 @@
 #include <cstdio>
 #include <deque>
 #include <thread>
+#include <string>
 
 namespace pe {
 namespace enet {

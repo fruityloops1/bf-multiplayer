@@ -4,6 +4,12 @@
 #include <sstream>
 #include <string>
 
+#ifdef _WIN32
+#include <winsock.h>
+#else
+#include <arpa/inet.h>
+#endif
+
 namespace pe {
 
 std::string readStringFromFile(const std::string& path)
@@ -48,6 +54,17 @@ uint8_t* readBytesFromFile(const std::string& path, size_t* outSize)
     fread(data, *outSize, 1, file);
     fclose(file);
     return data;
+}
+
+char* InetNtoa(unsigned int addr)
+{
+    in_addr inaddr;
+#ifdef _WIN32
+        inaddr.S_un.S_addr = addr;
+#else
+        inaddr = { addr };
+#endif
+    return inet_ntoa(inaddr);
 }
 
 } // namespace pe

@@ -22,7 +22,7 @@ struct ServerSaveData {
     std::vector<int> unlockedToads;
     bool jumpFlipState = false;
     size_t sharedSaveSize = 0;
-    uint8_t sharedSave[std::numeric_limits<uint16_t>::max() + 0x100];
+    uint8_t sharedSave[(std::numeric_limits<uint16_t>::max)() + 0x100];
 
     bool isGoalItemAlreadyCollected(int islandID, int scenarioID) const
     {
