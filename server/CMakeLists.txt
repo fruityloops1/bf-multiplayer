@@ -1,0 +1,26 @@
+cmake_minimum_required(VERSION 3.5)
+project(peepa-server)
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0 -g3 -ggdb")
+
+include_directories(Include)
+include_directories(${PROJECT_SOURCE_DIR}/Library/enet/include)
+include_directories(${PROJECT_SOURCE_DIR}/Library/penet/Include)
+include_directories(${PROJECT_SOURCE_DIR}/Library/LibNerve/Include)
+include_directories(${PROJECT_SOURCE_DIR}/Library/buddy_alloc)
+include_directories(${PROJECT_SOURCE_DIR}/Library/json/include)
+
+add_subdirectory(${PROJECT_SOURCE_DIR}/Library/enet)
+add_subdirectory(${PROJECT_SOURCE_DIR}/Library/penet)
+add_subdirectory(${PROJECT_SOURCE_DIR}/Library/LibNerve)
+add_subdirectory(${PROJECT_SOURCE_DIR}/Library/json)
+
+file(GLOB_RECURSE SOURCES_CXX ${PROJECT_SOURCE_DIR}/Source/*.cpp)
+add_executable(peepa-server ${SOURCES_CXX})
+find_package(Threads REQUIRED)
+target_link_libraries(peepa-server PUBLIC enet penet Nerve nlohmann_json)
+target_link_libraries(peepa-server PRIVATE Threads::Threads)
+file(COPY GameDataDefault.bin DESTINATION .)

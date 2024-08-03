@@ -1,0 +1,26 @@
+[submodule "lib/sead"]
+	path = lib/sead
+	url = https://github.com/open-ead/sead
+[submodule "NintendoSDK"]
+	path = lib/NintendoSDK
+	url = https://github.com/fruityloops1/nnheaders
+[submodule "lib/imgui"]
+	path = lib/imgui
+	url = https://github.com/ocornut/imgui
+	branch = docking
+[submodule "server/Library/enet"]
+	path = server/Library/enet
+	url = https://github.com/lsalzman/enet
+[submodule "server/Library/LibNerve"]
+	path = server/Library/LibNerve
+	url = https://github.com/fruityloops1/LibNerve
+	
+[submodule "lib/enet-nx"]
+	path = lib/enet-nx
+	url = https://github.com/fruityloops1/enet-nx
+[submodule "server/Library/buddy_alloc"]
+	path = server/Library/buddy_alloc
+	url = https://github.com/spaskalev/buddy_alloc
+[submodule "server/Library/json"]
+	path = server/Library/json
+	url = https://github.com/nlohmann/json

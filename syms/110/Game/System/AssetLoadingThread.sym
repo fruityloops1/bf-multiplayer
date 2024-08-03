@@ -1,0 +1,4 @@
+_ZN2rc18AssetLoadingThread9sInstanceE = __main_start + 0x01a110d8;
+
+_ZN2rc18AssetLoadingThread31cancelAndDelete3DWorldStationedEv = __main_start + 0x0040cda0;
+_ZN2rc18AssetLoadingThread9startLoadENS0_9LOAD_TYPEE = __main_start + 0x0040cb50;

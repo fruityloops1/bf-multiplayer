@@ -1,0 +1,2 @@
+_ZN4sead9FrameHeap6createEmRKNS_14SafeStringBaseIcEEPNS_4HeapEiNS5_13HeapDirectionEb = 0x00720550 + __main_start;
+_ZN4sead9FrameHeap9tryCreateEmRKNS_14SafeStringBaseIcEEPNS_4HeapEiNS5_13HeapDirectionEb = 0x00720560 + __main_start;

@@ -1,0 +1,2 @@
+_ZN2al23registerExecutorFunctorEPKcPNS_15ExecuteDirectorERKNS_11FunctorBaseE = __main_start + 0x0080b410;
+_ZN2al20registerExecutorUserEPNS_12IUseExecutorEPNS_15ExecuteDirectorEPKc = __main_start + 0x0080b400;

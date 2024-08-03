@@ -1,0 +1,7 @@
+_ZN2al6isDeadEPKNS_9LiveActorE = __main_start + 0x00835ac0;
+_ZN2al9isClippedEPKNS_9LiveActorE = __main_start + 0x00835460;
+_ZN2al11isHideModelEPKNS_9LiveActorE = __main_start + 0x0083a3f0;
+
+_ZN2al15hideModelIfShowEPNS_9LiveActorE = __main_start + 0x0083a480;
+_ZN2al9onCollideEPNS_9LiveActorE = __main_start + 0x00835b10;
+_ZN2al10offCollideEPNS_9LiveActorE = __main_start + 0x00835b30;

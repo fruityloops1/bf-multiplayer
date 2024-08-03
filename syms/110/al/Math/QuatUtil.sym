@@ -1,0 +1,5 @@
+_ZN2al20rotateQuatXDirDegreeEPN4sead4QuatIfEERKS2_f = __main_start + 0x0086d2e0;
+_ZN2al20rotateQuatYDirDegreeEPN4sead4QuatIfEERKS2_f = __main_start + 0x0086d400;
+_ZN2al20rotateQuatZDirDegreeEPN4sead4QuatIfEERKS2_f = __main_start + 0x0086d520;
+
+_ZN2al16rotateQuatRadianEPN4sead4QuatIfEERKS2_RKNS0_7Vector3IfEEf = __main_start + 0x0086d140;

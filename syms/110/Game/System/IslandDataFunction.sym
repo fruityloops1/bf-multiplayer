@@ -1,0 +1,2 @@
+_ZN18IslandDataFunction13getIslandNameEPN2al18IUseSceneObjHolderEPNS0_17IUseMessageSystemEi = __main_start + 0x004193d0;
+_ZN18IslandDataFunction21getIslandScenarioNameEPN2al18IUseSceneObjHolderEPNS0_17IUseMessageSystemEii = __main_start + 0x00419430;

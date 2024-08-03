@@ -1,0 +1,3 @@
+_ZN13WindowMessageC1ERKN2al14LayoutInitInfoEPKcS5_S5_ = __main_start + 0x001a0480;
+
+_ZN13WindowMessage23appearWithSystemMessageEPKcS1_i = __main_start + 0x001a05b0;

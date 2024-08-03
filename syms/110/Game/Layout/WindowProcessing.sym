@@ -1,0 +1,6 @@
+_ZN16WindowProcessingC1ERKN2al14LayoutInitInfoEPKc = __main_start + 0x001a1580;
+
+_ZN16WindowProcessing23appearWithSystemMessageEPKcS1_ib = __main_start + 0x001a1660;
+
+_ZN13WindowMessage9exeAppearEv = __main_start + 0x001a0720;
+_ZN13WindowMessage7exeWaitEv = __main_start + 0x001a07d0;

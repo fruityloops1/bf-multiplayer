@@ -1,0 +1,6 @@
+_ZN2al13isPadTriggerAEi = __main_start + 0x00947db0;
+_ZN2al13isPadTriggerBEi = __main_start + 0x00947ea0;
+_ZN2al16isPadTriggerPlusEi = __main_start + 0x00948bc0;
+
+_ZN2al11isPadHoldZLEi = __main_start + 0x00949f80;
+_ZN2al11isPadHoldZREi = __main_start + 0x0094a070;

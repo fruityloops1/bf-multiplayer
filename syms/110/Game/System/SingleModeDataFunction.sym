@@ -1,0 +1,5 @@
+_ZN22SingleModeDataFunction16completeScenarioE20GameDataHolderWriterRK12ScenarioInfo = __main_start + 0x0041f650;
+_ZN22SingleModeDataFunction11setPhaseEndE20GameDataHolderWriterb = __main_start + 0x00420060;
+_ZN22SingleModeDataFunction16setUnlockedPhaseE20GameDataHolderWriteri = __main_start + 0x00420320;
+_ZN22SingleModeDataFunction16getUnlockedPhaseE22GameDataHolderAccessor = __main_start + 0x0041ea10;
+_ZN22SingleModeDataFunction15setUnlockedCharE20GameDataHolderWriteri = __main_start + 0x004201e0;

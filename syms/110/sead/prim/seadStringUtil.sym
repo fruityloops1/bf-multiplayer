@@ -1,0 +1,2 @@
+_ZN4sead10StringUtil18convertUtf8ToUtf16EPDsjPKci = __main_start + 0x0072ab90;
+_ZN4sead14SafeStringBaseIDsE9cNullCharE = __main_start + 0x0072abc8; /* fake ahh hell but i dont give a FUCK */

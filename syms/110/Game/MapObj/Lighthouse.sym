@@ -1,0 +1,2 @@
+_ZN10Lighthouse15setScenarioAnimEv = __main_start + 0x00282850;
+_ZN10Lighthouse20setCurrentScenarioIDEi = __main_start + 0x002829c0;

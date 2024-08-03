@@ -1,0 +1,5 @@
+_ZN2al7startSeEPKNS_15IUseAudioKeeperERKN4sead14SafeStringBaseIcEEPNS_6MeInfoE = __main_start + 0x009b5000;
+_ZN2al10tryStartSeEPKNS_15IUseAudioKeeperERKN4sead14SafeStringBaseIcEEPNS_6MeInfoE = __main_start + 0x009b50d0;
+_ZN2al18tryHoldSeWithParamEPKNS_15IUseAudioKeeperERKN4sead14SafeStringBaseIcEEfPNS_6MeInfoE = __main_start + 0x009b5520;
+_ZN2al28setSeSeqLocalVariableDefaultEPKNS_15IUseAudioKeeperEii = __main_start + 0x009b5a30;
+_ZN2al9tryStopSeEPKNS_15IUseAudioKeeperERKN4sead14SafeStringBaseIcEE = __main_start + 0x009b55e0;

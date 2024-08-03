@@ -1,0 +1,3 @@
+_ZN11ButtonGroup10showCursorEv = __main_start + 0x00161360;
+_ZN11ButtonGroup10hideCursorEv = __main_start + 0x001613c0;
+_ZNK11ButtonGroup21getSelectedButtonNameEv = __main_start + 0x00161b30;

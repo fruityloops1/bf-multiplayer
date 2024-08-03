@@ -1,0 +1,132 @@
+#pragma once
+
+#include "Game/MapObj/Lighthouse.h"
+#include "al/Camera/CameraDirector.h"
+#include "al/Camera/CameraDirector_RS.h"
+#include "al/Collision/MtxConnector.h"
+#include "al/Functor/FunctorBase.h"
+
+class GoalItem : public al::LiveActor {
+public:
+    GoalItem(const char* name);
+
+    class CameraPoserProgramable_RS* mGoalItemCamera = nullptr;
+    sead::Vector3f mCameraPos;
+    sead::Vector3f mCameraAt;
+    int mIslandID;
+    int mID;
+    bool mIsCatMomShine;
+    bool pIsDisasterShine;
+    bool pIsLuckyShine;
+    u8 _176[10];
+    class GoalItemBindPuppeteer* mBindPuppeteer = nullptr;
+    int pAnimationFrameCount;
+    int _18C;
+    int pIslandClearStartFrame;
+    int pIslandClearEndFrame;
+    void* _198;
+    al::MtxConnector* mMtxConnector;
+    float pCollisionCheckDist;
+    int _1AC;
+    void* _1B0;
+    void* _1B8;
+    class ActorStateDemoCameraProto* mStateDemoCameraProto;
+    void* _1C8;
+    const char* pSharedLabel;
+    u8 _1D8[44];
+    float pCameraDistance;
+    void* _208;
+    al::CameraPoser_RS* mFixedActorCamera;
+    int pFocusCameraInStep;
+    int pFocusCameraHoldStep;
+    int pFocusCameraOutStep;
+    int pAreaOutStep;
+    Lighthouse* mLighthouse;
+    bool pIsMultiCollect;
+    bool _231;
+    bool _232;
+    bool pIsNoIslandFlagCutscene;
+    bool _234;
+    bool _235;
+    bool pIsTimerChallenge;
+    bool _237;
+    bool _238;
+    bool _239;
+    bool pIsRetainAppearAngle;
+    bool _23B;
+    bool _23C;
+    bool _23D;
+    bool _23E;
+    bool _23F;
+    int pDisasterModeSetting;
+    int _244;
+    class InkPatch* mInkPatch;
+    int pInkCameraInStep;
+    int pInkCameraHoldStep;
+    class DoorLock* mDoorLock;
+    al::AreaObj* mCameraArea;
+    u8 _268[24];
+    bool mIsAppearWait2;
+    bool pIsAppearWait;
+    bool pIsConsistentAngle;
+    bool _283;
+    bool _284;
+    bool pIsSetDistance;
+    bool pIsSetExitAngle;
+    bool _287;
+    bool _288;
+    bool _289;
+    bool _28A;
+    bool _28B;
+    bool _28C;
+    bool _28D;
+    bool pIsInkMeNot;
+    bool _28F;
+    bool pIsCodeBasedPath;
+    bool pIsKeepVerticalAngle;
+    bool pIsReturnToOldCameraPos;
+    bool pIsSetExitInterpolate;
+    int _294;
+    float pExitAngleH;
+    float pExitAngleV;
+    float pExitDirRate;
+    float pExitZoomInRate;
+    float pExitTgtOffsetY;
+    float pExitCamBlendCount;
+    float pMoveCount;
+    u8 _2B4[44];
+    float pSafeAngle;
+    int _2E4;
+    class ActorRailBrakeMover* mRailBrakeMover;
+    void* _2F0;
+    void* _2F8;
+    float pArcHeight;
+    u8 _304[100];
+    al::LiveActor* _368;
+    bool _370;
+    bool _371;
+    bool _372;
+    bool pIsClearGenericSaveLocation;
+    bool pIsSwitchOnGet;
+    u8 _375[7];
+    float pPhase2OffsetY;
+    float pPhase2DistanceOffset;
+    float pPhase3OffsetY;
+    float pPhase3DistanceOffset;
+    int pInkInterpoleStep;
+    int pInkLinkID;
+    int _394;
+    class CameraLookAtPoint* mInkLookAtPoint;
+    void* _3A0;
+    class SinkedItem* mBuriedShineObject;
+    void* _3B0;
+    void* _3B8;
+    char _3C0;
+    char _3C1;
+    char _3C2;
+    bool pIsCompletelyIdle;
+    int pInkReturnMoveCount;
+    al::FunctorBase* mDisasterFadeoutDoneFunctor;
+
+    // Lighthouse* mLighthouse;
+};

@@ -1,0 +1,2 @@
+_ZN2al16getModelResourceEPKNS_9LiveActorE = __main_start + 0x008403a0;
+_ZN2al20isExistModelResourceEPKNS_9LiveActorE = __main_start + 0x00840380;

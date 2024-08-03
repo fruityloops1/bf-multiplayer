@@ -1,0 +1,2 @@
+_ZN22GameDataHolderAccessorC1EPKN2al18IUseSceneObjHolderE = __main_start + 0x004183f0;
+_ZN22GameDataHolderAccessorC1EPKN2al14SceneObjHolderE = __main_start + 0x00418420;

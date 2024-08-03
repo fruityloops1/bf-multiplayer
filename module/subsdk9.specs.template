@@ -1,0 +1,7 @@
+%rename link old_link_
+
+*link:
+%(old_link_) -q --embedded-relocs --no-demangle -T @SUBSDK_LD_PATH@ -T @CMAKE_BINARY_DIR@/syms.ld --no-relax --gc-sections --unresolved-symbols=report-all --shared --build-id=sha1 --nx-module-name -init=exl_module_init --exclude-libs=ALL --ignore-unresolved-symbol __clear_cache --ignore-unresolved-symbol memset --ignore-unresolved-symbol memcmp --ignore-unresolved-symbol memcpy --ignore-unresolved-symbol strcmp --ignore-unresolved-symbol free --ignore-unresolved-symbol malloc --ignore-unresolved-symbol aligned_alloc --ignore-unresolved-symbol _ZN2nn2ro6detail15g_pAutoLoadListE --ignore-unresolved-symbol _ZN2nn2ro6detail36g_pLookupGlobalManualFunctionPointerE --ignore-unresolved-symbol _ZN2nn2ro6detail13g_RoDebugFlagE --ignore-unresolved-symbol __cxa_guard_release --ignore-unresolved-symbol __cxa_guard_acquire --ignore-unresolved-symbol atexit --ignore-unresolved-symbol strlen --ignore-unresolved-symbol strncpy --ignore-unresolved-symbol strcpy --ignore-unresolved-symbol snprintf --ignore-unresolved-symbol _ZN2nn2ro6detail35g_LookupGlobalManualFunctionPointerE --ignore-unresolved-symbol _ZSt24__throw_out_of_range_fmtPKcz --ignore-unresolved-symbol strcat --ignore-unresolved-symbol sinf --ignore-unresolved-symbol cosf --ignore-unresolved-symbol atan2f --ignore-unresolved-symbol fmodf --ignore-unresolved-symbol sqrtf
+
+*startfile:
+crti%O%s crtbegin%O%s

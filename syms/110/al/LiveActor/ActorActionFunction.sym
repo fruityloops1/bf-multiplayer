@@ -1,0 +1,24 @@
+_ZN2al11startActionEPNS_9LiveActorEPKc = __main_start + 0x008326c0;
+_ZN2al26tryStartActionIfNotPlayingEPNS_9LiveActorEPKc = __main_start + 0x008328b0;
+_ZN2al14tryStartActionEPNS_9LiveActorEPKc = __main_start + 0x008327e0;
+_ZN2al20tryStartEffectActionEPNS_9LiveActorEPKc = __main_start + 0x008329e0;
+
+_ZN2al13getActionNameEPKNS_9LiveActorE = __main_start + 0x00832d10;
+_ZN2al14getActionFrameEPKNS_9LiveActorE = __main_start + 0x00832cb0;
+_ZN2al17getActionFrameMaxEPKNS_9LiveActorEPKc = __main_start + 0x00832cd0;
+_ZN2al11isActionEndEPKNS_9LiveActorE = __main_start + 0x008329f0;
+
+_ZN2al19setSklAnimFrameRateEPNS_9LiveActorEfi = __main_start + 0x00833bc0;
+_ZN2al19getSklAnimFrameRateEPKNS_9LiveActorEi = __main_start + 0x00833b70;
+_ZN2al14isSklAnimExistEP = __main_start + 0x00833af0;
+_ZN2al14isSklAnimExistEPKNS_9LiveActorEPKc = __main_start + 0x008336e0;
+_ZN2al35addPartialSklAnimPartsListRecursiveEPNS_9LiveActorEPKci = __main_start + 0x00834a40;
+_ZN2al21clearSklAnimInterpoleEPNS_9LiveActorE = __main_start + 0x00833ae0;
+
+_ZN2al28setSklAnimBlendWeightSixfoldEPNS_9LiveActorEffffff = __main_start + 0x00833c90;
+
+_ZN2al27validateSklAnimRetargettingEPKNS_9LiveActorE = __main_start + 0x00833aa0;
+_ZN2al29invalidateSklAnimRetargettingEPKNS_9LiveActorE = __main_start + 0x00833ac0;
+
+_ZN2al16startHitReactionEPKNS_9LiveActorEPKc = __main_start + 0x008332d0;
+_ZN2al25startHitReactionDisappearEPKNS_9LiveActorE = __main_start + 0x00833420;

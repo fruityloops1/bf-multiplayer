@@ -1,0 +1,2 @@
+_ZN2al17getColliderRadiusEPKNS_9LiveActorE = __main_start + 0x0093d500;
+_ZN2al18getColliderOffsetYEPKNS_9LiveActorE = __main_start + 0x0093d510;

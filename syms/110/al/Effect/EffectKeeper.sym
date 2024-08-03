@@ -1,0 +1,2 @@
+_ZN2al13tryEmitEffectEPNS_16IUseEffectKeeperEPKcPKN4sead7Vector3IfEE = __main_start + 0x00968e50;
+_ZN2al15tryDeleteEffectEPNS_16IUseEffectKeeperEPKc = __main_start + 0x00968ec0;

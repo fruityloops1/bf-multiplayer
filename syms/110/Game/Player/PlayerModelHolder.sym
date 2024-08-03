@@ -1,0 +1,4 @@
+_ZN17PlayerModelHolderC1Ei = __main_start + 0x003ac710;
+_ZN17PlayerModelHolder13registerModelEiP11PlayerModel = __main_start + 0x003ac7b0;
+_ZN17PlayerModelHolder16initCurrentModelEi = __main_start + 0x003ac830;
+_ZN17PlayerModelHolder20validateTailDynamicsEv = __main_start + 0x003ae020;

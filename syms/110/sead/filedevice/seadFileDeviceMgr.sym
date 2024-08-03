@@ -1,0 +1,2 @@
+_ZN4sead13FileDeviceMgr9sInstanceE = __main_start + 0x01a28210;
+_ZN4sead13FileDeviceMgr5mountEPNS_10FileDeviceERKNS_14SafeStringBaseIcEE = __main_start + 0x0070e8b0;

@@ -1,0 +1,3 @@
+_ZN14PlayerAnimatorC1EPN2al9LiveActorEP17PlayerModelHolderP30IUsePlayerRetargettingSelector = __main_start + 0x003740a0;
+_ZN14PlayerAnimator4initEv = __main_start + 0x003741a0;
+_ZN14PlayerAnimator6updateEv = __main_start + 0x003741c0;
