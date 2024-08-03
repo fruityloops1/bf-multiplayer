@@ -6,7 +6,10 @@
 ## Build
 Mod: Install devkitPro and run `make`
 
-Server: Build using CMake on a POSIX system
+Server: Build using CMake on a POSIX system:
+- Make sure to cd into the `server` directory
+- `mkdir build && cd build && cmake ..`
+- `make`
 ## Install
 - Make sure to use Bowser's Fury 1.1 (latest version)
 - Put contents of the `sd` folder onto the root of SD card
@@ -14,6 +17,7 @@ Server: Build using CMake on a POSIX system
 - Copy `build/subsdk9` into `exefs/subsdk9`
 - Copy contents of `romfs` into LayeredFS RomFS folder
 ## Usage
+Run the server using the `peepa-server` binary in the build directory.
 The server will automatically open a connection on 0.0.0.0:7089 (UDP). Type `help` for a list of commands.
 Connect to your server's IP using the "Connect to Server" menu in-game. If you intend on connecting to your server from outside your local network, you must port forward the UDP port.
 
