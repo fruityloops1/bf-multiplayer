@@ -31,7 +31,8 @@ Connect to your server's IP using the "Connect to Server" menu in-game. If you i
 
 # Credits
 
-- [CraftyBoss](github.com/CraftyBoss/)
+- GRAnimated, for helping with and improving the mod's logo
+- [CraftyBoss](https://github.com/CraftyBoss/)
 - [KillzXGaming](https://github.com/KillzXGaming/Switch-Toolbox)
 - [OatmealDome](https://github.com/oatmealdome/enet-nx)
 - [exlaunch](https://github.com/shadowninja108/exlaunch/)
