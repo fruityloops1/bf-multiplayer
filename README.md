@@ -1,4 +1,4 @@
-![](https://imgur.com/EhcOm9z | width=250)
+![Bowser's Fury Online](https://i.imgur.com/EhcOm9z.png)
 
 Bowser's Fury Online is a mod for Bowser's Fury that allows you to play as the 5 characters from 3D World as opposed to only Mario, and also do that online with friends through a server with max. 5 participants (may be increased in the future, there are memory issues). Save files will be kept on the server and synced to all players.
 
