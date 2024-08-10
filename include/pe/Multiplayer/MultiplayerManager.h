@@ -30,6 +30,7 @@ class MultiplayerManager : public al::IUseExecutor {
     sead::ObjArray<PlayerData> mPlayers;
     PlayerData* mLocalPlayer = nullptr;
 
+    bool mPuppetsReady = false;
     sead::PtrArray<puppets::PlayerPuppet> mPuppetPools[5];
     sead::PtrArray<puppets::RaidonPuppet> mRaidonPuppetPool;
 
@@ -55,6 +56,7 @@ public:
     void init();
     void initAfterPlacement(SingleModeScene* scene);
     void initPuppets(PlayerActor* player, const al::ActorInitInfo& info);
+    void deinitPuppets() { mPuppetsReady = false; }
     void initLayout(const al::LayoutInitInfo& info);
     void onConnect();
 

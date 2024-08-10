@@ -95,6 +95,14 @@ void SingleModeSceneInitHook::Callback(SingleModeScene* scene, const al::SceneIn
     }
 }
 
+HOOK_DEFINE_TRAMPOLINE(SceneDestroy) { static void Callback(al::Scene * thisPtr); };
+
+void SceneDestroy::Callback(al::Scene* thisPtr)
+{
+    MultiplayerManager::instance()->deinitPuppets();
+    Orig(thisPtr);
+}
+
 void playerActorInitHook(PlayerActor* actor, const al::ActorInitInfo& info)
 {
     al::initActorSRT(actor, info);
@@ -159,6 +167,7 @@ void MultiplayerManager::init()
     exl::patch::CodePatcher(0x00146958).BranchLinkInst((void*)nameplateHideModelFix);
     SingleModeSceneControlHook::InstallAtOffset(0x003e84d0);
     SingleModeSceneInitHook::InstallAtOffset(0x003e7090);
+    SceneDestroy::InstallAtOffset(0x008a40e0);
     Patcher(0x003601ac).BranchLinkInst((void*)playerActorInitHook);
     initGoalItemSyncHooks();
     puppets::initPlayerBonkHook();
@@ -205,6 +214,8 @@ void MultiplayerManager::initPuppets(PlayerActor* player, const al::ActorInitInf
         al::initCreateActorNoPlacementInfo(puppet, info);
         mRaidonPuppetPool.pushBack(puppet);
     }
+
+    mPuppetsReady = true;
 }
 
 void MultiplayerManager::initLayout(const al::LayoutInitInfo& info)
@@ -258,7 +269,7 @@ void MultiplayerManager::handlePlayerListPacket(enet::ToC_PlayerList& packet)
             if (data->isLocal()) {
                 local = true;
                 data->setPuppet(nullptr);
-            } else if (isInSingleModeScene()) {
+            } else if (mPuppetsReady) {
                 puppets::PlayerPuppet* puppet = mPuppetPools[(int)entry.playerType][puppetPoolIdx];
                 puppets::RaidonPuppet* raidonPuppet = mRaidonPuppetPool[puppetPoolIdx];
                 if (puppet) {
@@ -271,6 +282,8 @@ void MultiplayerManager::handlePlayerListPacket(enet::ToC_PlayerList& packet)
                 data->setPuppet(puppet);
                 data->setRaidonPuppet(raidonPuppet);
                 puppetPoolIdx++;
+            } else {
+                pe::warn("Could not grab puppet for %s because puppets are not yet initialized", entry.name);
             }
 
             data->setIsHostClient(i == packet.size() - 1);
