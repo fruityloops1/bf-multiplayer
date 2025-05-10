@@ -24,3 +24,6 @@
 [submodule "server/Library/json"]
 	path = server/Library/json
 	url = https://github.com/nlohmann/json
+[submodule "sys"]
+	path = sys
+	url = https://github.com/fruityloops1/LibHakkun

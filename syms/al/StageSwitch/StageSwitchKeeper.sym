@@ -1,0 +1,7 @@
+@game:110
+
+_ZN2al16tryOnStageSwitchEPNS_15IUseStageSwitchEPKc = 0x008cc3e0
+_ZN2al17tryOffStageSwitchEPNS_15IUseStageSwitchEPKc = 0x008cc470
+_ZN2al19listenStageSwitchOnEPNS_15IUseStageSwitchEPKcRKNS_11FunctorBaseE = 0x008ccae0
+_ZN2al20listenStageSwitchOffEPNS_15IUseStageSwitchEPKcRKNS_11FunctorBaseE = 0x008ccb80
+_ZN2al24listenStageSwitchOnStartEPNS_15IUseStageSwitchERKNS_11FunctorBaseE = 0x008ccd30

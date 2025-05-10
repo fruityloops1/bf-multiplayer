@@ -1,3 +1,0 @@
-_ZN22SaveDataAccessFunction20updateSaveDataAccessEP14GameDataHolderb = __main_start + 0x0041acd0;
-_ZN22SaveDataAccessFunction17startSaveDataReadEP14GameDataHolderb = __main_start + 0x0041ace0;
-_ZN22SaveDataAccessFunction17startSaveDataInitEP14GameDataHolder = __main_start + 0x0041acd0;

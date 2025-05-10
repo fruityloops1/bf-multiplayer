@@ -1,0 +1,6 @@
+@game:110
+
+_ZN17PlayerModelHolderC1Ei = 0x003ac710
+_ZN17PlayerModelHolder13registerModelEiP11PlayerModel = 0x003ac7b0
+_ZN17PlayerModelHolder16initCurrentModelEi = 0x003ac830
+_ZN17PlayerModelHolder20validateTailDynamicsEv = 0x003ae020

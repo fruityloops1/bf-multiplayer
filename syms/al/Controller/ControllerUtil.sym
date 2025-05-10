@@ -1,0 +1,8 @@
+@game:110
+
+_ZN2al13isPadTriggerAEi = 0x00947db0
+_ZN2al13isPadTriggerBEi = 0x00947ea0
+_ZN2al16isPadTriggerPlusEi = 0x00948bc0
+
+_ZN2al11isPadHoldZLEi = 0x00949f80
+_ZN2al11isPadHoldZREi = 0x0094a070

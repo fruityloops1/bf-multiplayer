@@ -1,4 +1,0 @@
-_ZN2al21tryCreateMtxConnectorEPNS_9LiveActorERKNS_13ActorInitInfoE = __main_start + 0x007fe830;
-
-_ZN2al29attachMtxConnectorToCollisionEPNS_12MtxConnectorEPKNS_9LiveActorEb = __main_start + 0x007fe930;
-_ZN2al13connectPoseQTEPNS_9LiveActorEPKNS_12MtxConnectorE = __main_start + 0x007fea60;

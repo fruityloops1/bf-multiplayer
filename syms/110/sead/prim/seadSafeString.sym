@@ -1,9 +1,0 @@
-_ZN4sead14SafeStringBaseIcEaSERKS1_ = __main_start + 0x007266a0;
-_ZN4sead14SafeStringBaseIcE9cNullCharE = __main_start + 0x0105d6d9;
-_ZN4sead14SafeStringBaseIcE12cEmptyStringE = __main_start + 0x0105d6d9; /* haha balls */
-
-_ZNK4sead22BufferedSafeStringBaseIcE22assureTerminationImpl_Ev = __main_start + 0x00726930;
-_ZN4sead22BufferedSafeStringBaseIcE7formatVEPKcSt9__va_list = __main_start + 0x00726970;
-_ZN4sead22BufferedSafeStringBaseIcEaSERKNS_14SafeStringBaseIcEE = __main_start + 0x007266c0;
-_ZNK4sead22BufferedSafeStringBaseIDsE22assureTerminationImpl_Ev = __main_start + 0x00726950;
-_ZN4sead22BufferedSafeStringBaseIDsEaSERKNS_14SafeStringBaseIDsEE = __main_start + 0x00726790;

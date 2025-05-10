@@ -1,0 +1,5 @@
+@game:110
+
+_ZN2al13isEqualStringEPKcS1_ = 0x008e4b20
+_ZN2al13isEqualStringERKN4sead14SafeStringBaseIcEES4_ = 0x008e4b50
+_ZN2al16isEqualSubStringEPKcS1_ = 0x008e49f0

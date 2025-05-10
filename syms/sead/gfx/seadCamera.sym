@@ -1,0 +1,6 @@
+@game:110
+
+_ZTVN4sead12LookAtCameraE = 0x013ddcf8
+
+_ZN4sead12LookAtCameraD1Ev = 0x00736520
+_ZN4sead6CameraD2Ev = 0x00736270

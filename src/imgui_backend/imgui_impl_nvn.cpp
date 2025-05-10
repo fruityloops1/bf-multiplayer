@@ -1,8 +1,8 @@
 #include "imgui_impl_nvn.hpp"
 #include "helpers/fsHelper.h"
+#include "hk/types.h"
 #include "imgui.h"
 #include "imgui_hid_mappings.h"
-#include "lib.hpp"
 #include <cmath>
 
 #include "nn/hid.h"
@@ -55,7 +55,7 @@ void initTestShader()
     bd->testShaderBuffer = IM_NEW(MemoryBuffer)(bd->testShaderBinary.size, bd->testShaderBinary.ptr,
         nvn::MemoryPoolFlags::CPU_UNCACHED | nvn::MemoryPoolFlags::GPU_CACHED | nvn::MemoryPoolFlags::SHADER_CODE);
 
-    EXL_ASSERT(bd->testShaderBuffer->IsBufferReady(), "Shader Buffer was not ready! unable to continue.");
+    HK_ABORT_UNLESS(bd->testShaderBuffer->IsBufferReady(), "Shader Buffer was not ready! unable to continue.", 0);
 
     BinaryHeader offsetData = BinaryHeader((u32*)bd->testShaderBinary.ptr);
 
@@ -69,8 +69,8 @@ void initTestShader()
     fragShaderData.data = addr + offsetData.mFragmentDataOffset;
     fragShaderData.control = bd->testShaderBinary.ptr + offsetData.mFragmentControlOffset;
 
-    EXL_ASSERT(bd->testShader.Initialize(bd->device), "Unable to Init Program!");
-    EXL_ASSERT(bd->testShader.SetShaders(2, bd->testShaderDatas), "Unable to Set Shaders!");
+    HK_ABORT_UNLESS(bd->testShader.Initialize(bd->device), "Unable to Init Program!", 0);
+    HK_ABORT_UNLESS(bd->testShader.SetShaders(2, bd->testShaderDatas), "Unable to Set Shaders!", 0);
 }
 
 // neat tool to cycle through all loaded textures in a texture pool
@@ -220,7 +220,7 @@ NvnBackendData* getBackendData()
 {
     NvnBackendData* result = ImGui::GetCurrentContext() ? (NvnBackendData*)ImGui::GetIO().BackendRendererUserData
                                                         : nullptr;
-    EXL_ASSERT(result, "Backend has not been initialized!");
+    HK_ABORT_UNLESS(result, "Backend has not been initialized!", 0);
     return result;
 }
 
@@ -270,7 +270,7 @@ bool setupFont()
 
     int sampMemPoolSize = sampDescSize * MaxSampDescriptors;
     int texMemPoolSize = texDescSize * MaxTexDescriptors;
-    int totalPoolSize = ALIGN_UP(sampMemPoolSize + texMemPoolSize, 0x1000);
+    int totalPoolSize = hk::alignUp(sampMemPoolSize + texMemPoolSize, 0x1000);
     if (!MemoryPoolMaker::createPool(&bd->sampTexMemPool, totalPoolSize)) {
         return false;
     }
@@ -290,7 +290,7 @@ bool setupFont()
     io.Fonts->GetTexDataAsRGBA32(&pixels, &width, &height, &pixelByteSize);
     int texPoolSize = pixelByteSize * width * height;
 
-    if (!MemoryPoolMaker::createPool(&bd->fontMemPool, ALIGN_UP(texPoolSize, 0x1000),
+    if (!MemoryPoolMaker::createPool(&bd->fontMemPool, hk::alignUp(texPoolSize, 0x1000),
             nvn::MemoryPoolFlags::CPU_UNCACHED | nvn::MemoryPoolFlags::GPU_CACHED)) {
         return false;
     }
@@ -336,7 +336,7 @@ bool setupFont()
     bd->samplerPool.RegisterSampler(bd->samplerId, &bd->fontSampler);
 
     bd->fontTexHandle = bd->device->GetTextureHandle(bd->textureId, bd->samplerId);
-    io.Fonts->SetTexID(&bd->fontTexHandle);
+    io.Fonts->SetTexID(ImTextureID(&bd->fontTexHandle));
 
     return true;
 }
@@ -396,7 +396,7 @@ bool setupShaders(u8* shaderBinary, ulong binarySize)
 void InitBackend(const NvnBackendInitInfo& initInfo)
 {
     ImGuiIO& io = ImGui::GetIO();
-    EXL_ASSERT(!io.BackendRendererUserData, "Already Initialized Imgui Backend!");
+    HK_ABORT_UNLESS(!io.BackendRendererUserData, "Already Initialized Imgui Backend!", 0);
 
     io.BackendPlatformName = "Switch";
     io.BackendRendererName = "imgui_impl_nvn";

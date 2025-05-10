@@ -1,0 +1,4 @@
+@game:110
+
+_ZN10Lighthouse15setScenarioAnimEv = 0x00282850
+_ZN10Lighthouse20setCurrentScenarioIDEi = 0x002829c0

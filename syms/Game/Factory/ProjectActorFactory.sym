@@ -1,0 +1,7 @@
+@game:110
+
+_ZTV19ProjectActorFactory = 0x01387228
+
+_ZNK19ProjectActorFactory11convertNameEPKc = 0x0080f050
+
+_ZN19ProjectActorFactory13sActorEntriesE = 0x01387240

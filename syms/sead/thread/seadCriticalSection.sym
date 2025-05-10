@@ -1,0 +1,7 @@
+@game:110
+
+_ZN4sead15CriticalSectionD1Ev = 0x00733c70
+_ZN4sead15CriticalSectionC1Ev = 0x00733bf0
+_ZN4sead15CriticalSection7tryLockEv = 0x00733d00
+_ZN4sead15CriticalSection4lockEv = 0x00733cf0
+_ZN4sead15CriticalSection6unlockEv = 0x00733d10

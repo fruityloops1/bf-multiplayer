@@ -1,0 +1,4 @@
+@game:110
+
+_ZN2rc17isPlayerHideModelEPKN2al9LiveActorE = 0x00430060
+_ZN2rc21isAnyPlayerJumpTrigOnEPKN2al9LiveActorE = 0x0042b5e0

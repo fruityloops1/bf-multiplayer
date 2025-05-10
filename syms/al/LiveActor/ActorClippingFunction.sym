@@ -1,0 +1,4 @@
+@game:110
+
+_ZN2al16validateClippingEPNS_9LiveActorE = 0x008354f0
+_ZN2al18invalidateClippingEPNS_9LiveActorE = 0x00835480

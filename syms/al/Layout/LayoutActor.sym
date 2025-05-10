@@ -1,0 +1,47 @@
+@game:110
+
+_ZTVN2al11LayoutActorE = 0x0140b6d8
+
+_ZN2al11LayoutActorC1EPKc = 0x0096db20
+_ZN2al11LayoutActorC2EPKc = 0x0096db20
+
+_ZNK2al11LayoutActor7getNameEv = 0x00016ef0
+_ZNK2al11LayoutActor15getLayoutKeeperEv = 0x00016f50
+_ZNK2al11LayoutActor14getNerveKeeperEv = 0x00016ee0
+_ZN2al11LayoutActor6appearEv = 0x0096dc80
+_ZN2al11LayoutActor4killEv = 0x0096dce0
+_ZN2al11LayoutActor8movementEv = 0x0096dd30
+_ZN2al11LayoutActor8calcAnimEb = 0x0096ddd0
+_ZNK2al11LayoutActor15getEffectKeeperEv = 0x00016f20
+_ZNK2al11LayoutActor14getAudioKeeperEv = 0x00016f30
+_ZNK2al11LayoutActor21getLayoutActionKeeperEv = 0x00016f40
+_ZNK2al11LayoutActor18getSceneCameraInfoEv = 0x0096dfe0
+_ZNK2al11LayoutActor17getSceneObjHolderEv = 0x0096e000
+_ZNK2al11LayoutActor16getMessageSystemEv = 0x0096e020
+_ZN2al11LayoutActor7controlEv = 0x00016f60
+
+_ZThn8_NK2al11LayoutActor15getLayoutKeeperEv = 0x00016fb0
+_ZThn8_NK2al11LayoutActor7getNameEv = 0x00016f70
+_ZThn16_NK2al11LayoutActor7getNameEv = 0x0
+_ZThn16_NK2al11LayoutActor21getLayoutActionKeeperEv = 0x00016fc0
+_ZThn24_NK2al11LayoutActor16getMessageSystemEv = 0x0096e030
+_ZThn32_NK2al11LayoutActor18getSceneCameraInfoEv = 0x0096dff0
+_ZThn40_NK2al11LayoutActor14getAudioKeeperEv = 0x00016ff0
+_ZThn48_NK2al11LayoutActor15getEffectKeeperEv = 0x00017000
+_ZThn56_NK2al11LayoutActor17getSceneObjHolderEv = 0x0096e010
+
+_ZN2al11LayoutActor16initActionKeeperEv = 0x0096de30
+_ZN2al11LayoutActor15initAudioKeeperEPNS_11AudioKeeperE = 0x0096df50
+_ZN2al11LayoutActor16initLayoutKeeperEPNS_12LayoutKeeperE = 0x0096de20
+_ZN2al11LayoutActor26initLayoutPartsActorKeeperEi = 0x0096def0
+_ZN2al11LayoutActor9initNerveEPKNS_5NerveEi = 0x0096df60
+_ZN2al11LayoutActor13initSceneInfoEPNS_15LayoutSceneInfoE = 0x0096dee0
+
+_ZN2al15initLayoutActorEPNS_11LayoutActorERKNS_14LayoutInitInfoEPKcS6_ = 0x00970d30
+
+_ZN2al11isActionEndEPKNS_16IUseLayoutActionEPKc = 0x0096d0f0
+_ZN2al11startActionEPNS_16IUseLayoutActionEPKcS3_ = 0x0096cd80
+
+_ZN2al8hidePaneEPNS_10IUseLayoutEPKc = 0x0096e8e0
+_ZN2al8showPaneEPNS_10IUseLayoutEPKc = 0x0096e890
+_ZN2al13setPaneStringEPNS_10IUseLayoutEPKcPKDsti = 0x0096edf0

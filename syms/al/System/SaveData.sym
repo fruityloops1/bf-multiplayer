@@ -1,0 +1,6 @@
+@game:110
+
+_ZN2al20requestWriteSaveDataEPKcjjb = 0x008a2650
+_ZN2al19requestReadSaveDataEPKcjj = 0x008a2610
+_ZN2al18requestInitSaveDirEPKcjj = 0x008a25d0
+_ZN2al22updateSaveDataSequenceEv = 0x008a2700

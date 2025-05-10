@@ -1,0 +1,4 @@
+@game:110
+
+_ZN18IslandDataFunction13getIslandNameEPN2al18IUseSceneObjHolderEPNS0_17IUseMessageSystemEi = 0x004193d0
+_ZN18IslandDataFunction21getIslandScenarioNameEPN2al18IUseSceneObjHolderEPNS0_17IUseMessageSystemEii = 0x00419430

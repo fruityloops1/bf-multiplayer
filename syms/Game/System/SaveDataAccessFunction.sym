@@ -1,0 +1,5 @@
+@game:110
+
+_ZN22SaveDataAccessFunction20updateSaveDataAccessEP14GameDataHolderb = 0x0041acd0
+_ZN22SaveDataAccessFunction17startSaveDataReadEP14GameDataHolderb = 0x0041ace0
+_ZN22SaveDataAccessFunction17startSaveDataInitEP14GameDataHolder = 0x0041acd0

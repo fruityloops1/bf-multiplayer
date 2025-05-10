@@ -1,13 +1,13 @@
 #pragma once
 
 #ifdef NNSDK
-#include "diag/assert.hpp"
+#include "hk/diag/diag.h"
 #include "pe/Enet/Enet.h"
 #include "pe/Util/Log.h"
-#define PENET_ABORT(FMT, ...)      \
-    {                              \
-        pe::err(FMT, __VA_ARGS__); \
-        EXL_ABORT(0x402);          \
+#define PENET_ABORT(FMT, ...)       \
+    {                               \
+        pe::err(FMT, __VA_ARGS__);  \
+        HK_ABORT(FMT, __VA_ARGS__); \
     }
 #define PENET_WARN(FMT, ...)        \
     {                               \

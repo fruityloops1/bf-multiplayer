@@ -1,0 +1,5 @@
+@game:110
+
+_ZN13WindowMessageC1ERKN2al14LayoutInitInfoEPKcS5_S5_ = 0x001a0480
+
+_ZN13WindowMessage23appearWithSystemMessageEPKcS1_i = 0x001a05b0

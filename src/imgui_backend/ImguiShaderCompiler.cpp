@@ -2,9 +2,10 @@
 #include "ImguiShaderCompiler.h"
 #include "glslc/glslc.h"
 #include "helpers/fsHelper.h"
+#include "hk/diag/diag.h"
+#include "hk/types.h"
 #include "nn/fs.h"
 #include "nn/init.h"
-#include "result.hpp"
 #include <cstdio>
 #include <cstring>
 
@@ -21,7 +22,7 @@ const char* shaderNames[] = {
 
 extern "C" void* glslc_Alloc(size_t size, size_t alignment, void* user_data = nullptr)
 {
-    return nn::init::GetAllocator()->Allocate(ALIGN_UP(size, alignment));
+    return nn::init::GetAllocator()->Allocate(hk::alignUp(size, alignment));
 }
 
 extern "C" void glslc_Free(void* ptr, void* user_data = nullptr)
@@ -34,7 +35,7 @@ extern "C" void* glslc_Realloc(void* ptr, size_t size, void* user_data = nullptr
     return nn::init::GetAllocator()->Reallocate(ptr, size);
 }
 
-void NOINLINE ReadCompiledShader(GLSLCoutput* compileData)
+void hk_noinline ReadCompiledShader(GLSLCoutput* compileData)
 {
 
     for (int i = 0; i < compileData->numSections; ++i) {
@@ -49,7 +50,7 @@ void createPath(char* fullPath, const char* rootDir, const char* file, const cha
     sprintf(fullPath, "%s/%s%s", rootDir, file, ext);
 }
 
-CompiledData NOINLINE CreateShaderBinary(GLSLCoutput* compileData, const char* shaderName, bool outputFile = true)
+CompiledData hk_noinline CreateShaderBinary(GLSLCoutput* compileData, const char* shaderName, bool outputFile = true)
 {
 
     // TODO: make this work with more/less than 2 shaders
@@ -58,11 +59,11 @@ CompiledData NOINLINE CreateShaderBinary(GLSLCoutput* compileData, const char* s
 
     for (int i = 0; i < compileData->numSections; ++i) {
         if (compileData->headers[i].genericHeader.common.type == GLSLCsectionTypeEnum::GLSLC_SECTION_TYPE_GPU_CODE) {
-            binarySize = ALIGN_UP(binarySize + compileData->headers[i].genericHeader.common.size, 0x100);
+            binarySize = hk::alignUp(binarySize + compileData->headers[i].genericHeader.common.size, 0x100);
         }
     }
 
-    binarySize = ALIGN_UP(binarySize + 0x1000, 0x1000);
+    binarySize = hk::alignUp(binarySize + 0x1000, 0x1000);
 
     u8* rawDataBinary = (u8*)compileData;
 
@@ -82,7 +83,7 @@ CompiledData NOINLINE CreateShaderBinary(GLSLCoutput* compileData, const char* s
         void* controlSection = rawDataBinary + (compInfo->common.dataOffset + compInfo->controlOffset);
         memcpy(binaryBuffer + curBinaryPos, controlSection, compInfo->controlSize);
         headerInfo[i] = curBinaryPos;
-        curBinaryPos = ALIGN_UP(curBinaryPos + compInfo->controlSize, 0x100);
+        curBinaryPos = hk::alignUp(curBinaryPos + compInfo->controlSize, 0x100);
     }
 
     // place data sections next
@@ -96,7 +97,7 @@ CompiledData NOINLINE CreateShaderBinary(GLSLCoutput* compileData, const char* s
         memcpy(binaryBuffer + curBinaryPos, dataSection, compInfo->dataSize);
 
         headerInfo[compileData->numSections + i] = curBinaryPos;
-        curBinaryPos = ALIGN_UP(curBinaryPos + compInfo->dataSize, 0x100);
+        curBinaryPos = hk::alignUp(curBinaryPos + compInfo->dataSize, 0x100);
     }
 
     memcpy(binaryBuffer, headerInfo, sizeof(headerInfo));
@@ -106,7 +107,7 @@ CompiledData NOINLINE CreateShaderBinary(GLSLCoutput* compileData, const char* s
         char fullPath[0x40] = {};
         createPath(fullPath, "sd:/LunaKit/ImGuiData/", shaderName, ".bin");
 
-        R_ABORT_UNLESS(FsHelper::writeFileToPath(binaryBuffer, binarySize, fullPath).IsFailure())
+        HK_ABORT_UNLESS_R(FsHelper::writeFileToPath(binaryBuffer, binarySize, fullPath).GetInnerValueForDebug());
     }
 
     return { binaryBuffer, binarySize };
@@ -116,15 +117,15 @@ const char* GetShaderSource(const char* path)
 {
     nn::fs::FileHandle handle;
 
-    EXL_ASSERT(FsHelper::isFileExist(path), "Failed to Find File!");
+    HK_ABORT_UNLESS(FsHelper::isFileExist(path), "Failed to Find File!", 0);
 
-    R_ABORT_UNLESS(nn::fs::OpenFile(&handle, path, nn::fs::OpenMode_Read).IsFailure())
+    HK_ABORT_UNLESS_R(nn::fs::OpenFile(&handle, path, nn::fs::OpenMode_Read).GetInnerValueForDebug());
 
     long size = 0;
     nn::fs::GetFileSize(&size, handle);
     char* sourceFile = (char*)glslc_Alloc(size + 1, 8);
 
-    R_ABORT_UNLESS(nn::fs::ReadFile(handle, 0, sourceFile, size).IsFailure())
+    HK_ABORT_UNLESS_R(nn::fs::ReadFile(handle, 0, sourceFile, size).GetInnerValueForDebug());
 
     nn::fs::CloseFile(handle);
 
@@ -202,7 +203,7 @@ CompiledData ImguiShaderCompiler::CompileShader(const char* shaderName)
 
     if (glslcDll->GlslcCompile(&initInfo)) {
     } else {
-        EXL_ABORT(0, "Failed to Compile supplied shaders. \nVert Path: %s\nFrag Path: %s\n", vshPath, fshPath);
+        HK_ABORT("Failed to Compile supplied shaders. \nVert Path: %s\nFrag Path: %s\n", vshPath, fshPath);
     }
 
     // glslcDll->Finalize(); // finalize compiler (does nothing)

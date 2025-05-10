@@ -1,3 +1,0 @@
-_ZN2al15getPlayerNumMaxEPKNS_9LiveActorE = __main_start + 0x0088d820;
-_ZN2al14getPlayerActorEPKNS_9LiveActorEi = __main_start + 0x0088d8f0;
-_ZN2al12PlayerHolder12tryGetPlayerEi = __main_start + 0x0088d7a0;

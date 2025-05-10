@@ -1,0 +1,12 @@
+@game:110
+
+_ZN2al14initNerveStateEPNS_9IUseNerveEPNS_14NerveStateBaseEPKNS_5NerveEPKc = 0x00881560
+_ZN2al8setNerveEPNS_9IUseNerveEPKNS_5NerveE = 0x00880950
+_ZN2al7isNerveEPKNS_9IUseNerveEPKNS_5NerveE = 0x00880a30
+_ZN2al15getCurrentNerveEPKNS_9IUseNerveE = 0x00880a90
+
+_ZN2al12getNerveStepEPKNS_9IUseNerveE = 0x00880a70
+_ZN2al6isStepEPKNS_9IUseNerveEi = 0x008809f0
+_ZN2al11isFirstStepEPKNS_9IUseNerveE = 0x00880ab0
+
+_ZN2al16updateNerveStateEPNS_9IUseNerveE = 0x00881610

@@ -1,0 +1,5 @@
+@game:110
+
+_ZN2al15getPlayerNumMaxEPKNS_9LiveActorE = 0x0088d820
+_ZN2al14getPlayerActorEPKNS_9LiveActorEi = 0x0088d8f0
+_ZN2al12PlayerHolder12tryGetPlayerEi = 0x0088d7a0

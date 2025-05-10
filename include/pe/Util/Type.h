@@ -2,7 +2,7 @@
 
 #include "Game/Player/PlayerActor.h"
 #include "al/LiveActor/LiveActor.h"
-#include "util/modules.hpp"
+#include "hk/ro/RoUtil.h"
 #include <type_traits>
 
 namespace pe {
@@ -18,7 +18,7 @@ namespace util {
     template <typename T>
     ptrdiff_t getVftOffsetMain(const T* instance)
     {
-        return getVft(instance) - exl::util::modules::GetTargetStart();
+        return getVft(instance) - hk::ro::getMainModule()->range().start();
     }
 
     template <typename T, typename F>

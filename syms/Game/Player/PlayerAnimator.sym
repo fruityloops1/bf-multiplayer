@@ -1,0 +1,5 @@
+@game:110
+
+_ZN14PlayerAnimatorC1EPN2al9LiveActorEP17PlayerModelHolderP30IUsePlayerRetargettingSelector = 0x003740a0
+_ZN14PlayerAnimator4initEv = 0x003741a0
+_ZN14PlayerAnimator6updateEv = 0x003741c0

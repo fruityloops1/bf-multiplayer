@@ -1,0 +1,5 @@
+@game:110
+
+_ZN4sead12PtrArrayImpl9setBufferEiPv = 0x0070c070
+_ZN4sead12PtrArrayImpl11allocBufferEiPNS_4HeapEi = 0x0070c090
+_ZN4sead12PtrArrayImpl10freeBufferEv = 0x0070c160

@@ -1,0 +1,4 @@
+@game:110
+
+_ZN22DisasterModeController16tryGetControllerEPKN2al18IUseSceneObjHolderE = 0x0020be90
+_ZN22DisasterModeController17updateRainEffectsEv = 0x0020e300

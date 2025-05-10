@@ -1,2 +1,0 @@
-_ZN22DisasterModeController16tryGetControllerEPKN2al18IUseSceneObjHolderE = __main_start + 0x0020be90;
-_ZN22DisasterModeController17updateRainEffectsEv = __main_start + 0x0020e300;

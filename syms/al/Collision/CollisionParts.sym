@@ -1,0 +1,6 @@
+@game:110
+
+_ZN2al22validateCollisionPartsEPNS_9LiveActorE = 0x0093cfa0
+_ZN2al24invalidateCollisionPartsEPNS_9LiveActorE = 0x0093d000
+
+_ZN2al10isOnGroundEPKNS_9LiveActorEjf = 0x0093d370
