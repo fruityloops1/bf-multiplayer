@@ -1,0 +1,5 @@
+@game:110
+
+_ZN11ButtonGroup10showCursorEv = 0x00161360
+_ZN11ButtonGroup10hideCursorEv = 0x001613c0
+_ZNK11ButtonGroup21getSelectedButtonNameEv = 0x00161b30

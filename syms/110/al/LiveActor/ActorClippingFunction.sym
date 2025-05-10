@@ -1,2 +1,0 @@
-_ZN2al16validateClippingEPNS_9LiveActorE = __main_start + 0x008354f0;
-_ZN2al18invalidateClippingEPNS_9LiveActorE = __main_start + 0x00835480;

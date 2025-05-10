@@ -1,6 +1,0 @@
-_ZN4sead7Vector2IfE4zeroE = __main_start + 0x0105d5a8;
-
-_ZN4sead7Vector3IfE4zeroE = __main_start + 0x0105d5c8;
-_ZN4sead7Vector3IfE2exE = __main_start + 0x0105d5d4;
-_ZN4sead7Vector3IfE2eyE = __main_start + 0x0105d5e0;
-_ZN4sead7Vector3IfE2ezE = __main_start + 0x0105d5ec;

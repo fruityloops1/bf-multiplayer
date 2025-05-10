@@ -42,3 +42,5 @@ build.sh
 .clangd/
 .idea/
 cmake-build-debug/
+
+lib/std

@@ -1,2 +1,0 @@
-_ZN2rc17isPlayerHideModelEPKN2al9LiveActorE = __main_start + 0x00430060;
-_ZN2rc21isAnyPlayerJumpTrigOnEPKN2al9LiveActorE = __main_start + 0x0042b5e0;

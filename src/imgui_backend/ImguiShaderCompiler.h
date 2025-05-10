@@ -6,13 +6,14 @@
 #include "types.h"
 
 struct CompiledData {
-    u8 *ptr;
-    ulong size;
+    u8* ptr;
+    size_t size;
 };
 
 struct BinaryHeader {
 
-    BinaryHeader(u32* header) {
+    BinaryHeader(u32* header)
+    {
         mFragmentControlOffset = header[0];
         mVertexControlOffset = header[1];
         mFragmentDataOffset = header[2];
@@ -23,11 +24,10 @@ struct BinaryHeader {
     u32 mVertexDataOffset;
     u32 mFragmentControlOffset;
     u32 mFragmentDataOffset;
-
 };
 
 namespace ImguiShaderCompiler {
-    bool CheckIsValidVersion(nvn::Device *device);
-    CompiledData CompileShader(const char *shaderName);
-    void InitializeCompiler();
+bool CheckIsValidVersion(nvn::Device* device);
+CompiledData CompileShader(const char* shaderName);
+void InitializeCompiler();
 };

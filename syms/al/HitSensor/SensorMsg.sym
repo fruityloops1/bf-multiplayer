@@ -1,0 +1,12 @@
+@game:110
+
+_ZN2al21isMsgPlayerFloorTouchEPKNS_9SensorMsgE = 0x00847cf0
+_ZN2al16isMsgTouchAssistEPKNS_9SensorMsgE = 0x0084aca0
+_ZN2al36isMsgPlayerTrampleForCrossoverSensorEPKNS_9SensorMsgEPNS_9HitSensorES4_ = 0x0084c1b0
+
+_ZN2al11sendMsgPushEPNS_9HitSensorES1_ = 0x00843870
+_ZN2al18sendMsgEnemyAttackEPNS_9HitSensorES1_ = 0x00843640
+_ZN2al29sendMsgPlayerHipDropKnockDownEPNS_9HitSensorES1_ = 0x00842470
+
+_ZN2al14isSensorPlayerEPKNS_9HitSensorE = 0x0084c590
+_ZN2al17isSensorEnemyBodyEPKNS_9HitSensorE = 0x0084c670

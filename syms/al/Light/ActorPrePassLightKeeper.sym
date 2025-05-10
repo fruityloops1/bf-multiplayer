@@ -1,0 +1,4 @@
+@game:110
+
+_ZN2al19killPrePassLightAllEPKNS_9LiveActorEi = 0x0081ff70
+_ZN2al18appearPrePassLightEPKNS_9LiveActorEPKci = 0x0081fe90

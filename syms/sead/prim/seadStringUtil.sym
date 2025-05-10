@@ -1,0 +1,4 @@
+@game:110
+
+_ZN4sead10StringUtil18convertUtf8ToUtf16EPDsjPKci = 0x0072ab90
+_ZN4sead14SafeStringBaseIDsE9cNullCharE = 0x0072abc8 // fake ahh hell but i dont give a FUCK

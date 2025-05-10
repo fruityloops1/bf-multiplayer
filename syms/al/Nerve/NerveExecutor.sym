@@ -1,0 +1,8 @@
+@game:110
+
+_ZN2al13NerveExecutorC2EPKc = 0x00880420
+_ZN2al13NerveExecutorD0Ev = 0x00880440
+
+_ZNK2al13NerveExecutor14getNerveKeeperEv = 0x00001710
+_ZN2al13NerveExecutor9initNerveEPKNS_5NerveEi = 0x008804a0
+_ZN2al13NerveExecutor11updateNerveEv = 0x008804f0

@@ -1,0 +1,5 @@
+@game:110
+
+_ZN2al22setKeyMoveClippingInfoEPKNS_9LiveActorEPN4sead7Vector3IfEEPKNS_13KeyPoseKeeperE = 0x0081ab30
+_ZN2al15getKeyPoseCountEPKNS_13KeyPoseKeeperE = 0x0081a460
+_ZNK2al13KeyPoseKeeper17getCurrentKeyPoseEv = 0x0081a080

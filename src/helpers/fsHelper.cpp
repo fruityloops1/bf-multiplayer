@@ -1,5 +1,5 @@
 #include "fsHelper.h"
-#include "diag/assert.hpp"
+#include "hk/diag/diag.h"
 #include "nn/fs.h"
 #include "nn/init.h"
 #include "vapours/results/results_common.hpp"
@@ -40,18 +40,18 @@ void loadFileFromPath(LoadData& loadData)
 
     nn::fs::FileHandle handle;
 
-    EXL_ASSERT(FsHelper::isFileExist(loadData.path), "Failed to Find File!\nPath: %s", loadData.path);
+    HK_ABORT_UNLESS(FsHelper::isFileExist(loadData.path), "Failed to Find File!\nPath: %s", loadData.path);
 
-    R_ABORT_UNLESS(nn::fs::OpenFile(&handle, loadData.path, nn::fs::OpenMode_Read).IsFailure());
+    HK_ABORT_UNLESS_R(nn::fs::OpenFile(&handle, loadData.path, nn::fs::OpenMode_Read).IsFailure());
 
     long size = 0;
     nn::fs::GetFileSize(&size, handle);
     loadData.buffer = nn::init::GetAllocator()->Allocate(size);
     loadData.bufSize = size;
 
-    EXL_ASSERT(loadData.buffer, "Failed to Allocate Buffer! File Size: %ld", size);
+    HK_ABORT_UNLESS(loadData.buffer, "Failed to Allocate Buffer! File Size: %ld", size);
 
-    R_ABORT_UNLESS(nn::fs::ReadFile(handle, 0, loadData.buffer, size).IsFailure())
+    HK_ABORT_UNLESS_R(nn::fs::ReadFile(handle, 0, loadData.buffer, size).IsFailure());
 
     nn::fs::CloseFile(handle);
 }

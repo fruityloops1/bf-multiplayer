@@ -1,6 +1,0 @@
-_ZN2al13NerveExecutorC2EPKc = __main_start + 0x00880420;
-_ZN2al13NerveExecutorD0Ev = __main_start + 0x00880440;
-
-_ZNK2al13NerveExecutor14getNerveKeeperEv = __main_start + 0x00001710;
-_ZN2al13NerveExecutor9initNerveEPKNS_5NerveEi = __main_start + 0x008804a0;
-_ZN2al13NerveExecutor11updateNerveEv = __main_start + 0x008804f0;

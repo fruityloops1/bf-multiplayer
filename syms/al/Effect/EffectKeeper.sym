@@ -1,0 +1,4 @@
+@game:110
+
+_ZN2al13tryEmitEffectEPNS_16IUseEffectKeeperEPKcPKN4sead7Vector3IfEE = 0x00968e50
+_ZN2al15tryDeleteEffectEPNS_16IUseEffectKeeperEPKc = 0x00968ec0

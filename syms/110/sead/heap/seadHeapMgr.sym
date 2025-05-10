@@ -1,3 +1,0 @@
-_ZN4sead7HeapMgr12sInstancePtrE = __main_start + 0x01a285e0;
-_ZN4sead7HeapMgr10sRootHeapsE = __main_start + 0x01a28608;
-_ZN4sead7HeapMgr15setCurrentHeap_EPNS_4HeapE = __main_start + 0x00722b30;

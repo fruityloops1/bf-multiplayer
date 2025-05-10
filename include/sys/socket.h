@@ -1,19 +1,19 @@
 #pragma once
 
-#include "types.h"
+#include <stdint.h>
 
-typedef u32 socklen_t;
+typedef uint32_t socklen_t;
 
 struct in_addr {
-    u32 data; // 0
+    uint32_t data; // 0
 };
 
 struct sockaddr {
-    u8 _0; // 0
-    u8 family; // 1
-    u16 port; // 2
-    in_addr address; // 4
-    u8 _8[8]; // 8
+    uint8_t _0; // 0
+    uint8_t family; // 1
+    uint16_t port; // 2
+    struct in_addr address; // 4
+    uint8_t _8[8]; // 8
 };
 
 struct pollfd {
@@ -22,7 +22,7 @@ struct pollfd {
     short int revents;
 };
 
-using sockaddr_in = sockaddr;
+typedef struct sockaddr sockaddr_in;
 
 #define POLLIN 1
 #define POLLOUT 4

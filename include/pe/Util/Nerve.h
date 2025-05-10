@@ -2,7 +2,6 @@
 
 #include "al/Nerve/Nerve.h"
 #include "al/Nerve/NerveFunction.h"
-#include "util/modules.hpp"
 #include <cstdint>
 
 class ProductSequence;

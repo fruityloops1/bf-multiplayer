@@ -1,0 +1,9 @@
+@game:110
+
+_ZN2al15SceneHeapSetterC1Ev = 0x00872960
+
+_ZN2al15createSceneHeapEPKc = 0x008725e0
+_ZN2al15getSequenceHeapEv = 0x008722f0
+_ZN2al16getStationedHeapEv = 0x008722d0
+
+_ZN2al13findNamedHeapEPKc = 0x00872380

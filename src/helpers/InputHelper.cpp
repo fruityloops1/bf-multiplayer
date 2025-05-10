@@ -1,5 +1,4 @@
 #include "InputHelper.h"
-#include "diag/assert.hpp"
 
 static const char* styleNames[] = {
     "Pro Controller",

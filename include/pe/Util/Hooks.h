@@ -1,8 +1,8 @@
 #pragma once
 
 #include "al/LiveActor/LiveActor.h"
+#include "hk/ro/RoUtil.h"
 #include "pe/Util/Nerve.h"
-#include "util/modules.hpp"
 
 namespace pe {
 namespace util {
@@ -28,7 +28,7 @@ namespace util {
             F ptrType;
             uintptr_t offset;
         } conv { ptr };
-        return conv.offset - exl::util::modules::GetTargetStart();
+        return conv.offset - hk::ro::getMainModule()->range().start();
     }
 
 } // namespace

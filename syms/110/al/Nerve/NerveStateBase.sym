@@ -1,9 +1,0 @@
-_ZTVN2al14NerveStateBaseE = __main_start + 0x013f7b18;
-
-_ZN2al14NerveStateBaseC2EPKc = __main_start + 0x00880680;
-
-_ZN2al14NerveStateBase4initEv = __main_start + 0x00006ec0;
-_ZN2al14NerveStateBase6appearEv = __main_start + 0x00025310;
-_ZN2al14NerveStateBase4killEv = __main_start + 0x00006ed0;
-_ZN2al14NerveStateBase6updateEv = __main_start + 0x008806c0;
-_ZN2al14NerveStateBase7controlEv = __main_start + 0x00006ee0;

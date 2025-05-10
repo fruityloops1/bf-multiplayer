@@ -1,0 +1,5 @@
+@game:110
+
+_ZN4sead7HeapMgr12sInstancePtrE = 0x01a285e0
+_ZN4sead7HeapMgr10sRootHeapsE = 0x01a28608
+_ZN4sead7HeapMgr15setCurrentHeap_EPNS_4HeapE = 0x00722b30

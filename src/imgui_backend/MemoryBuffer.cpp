@@ -1,19 +1,21 @@
 #include "MemoryBuffer.h"
+#include "hk/types.h"
 #include "imgui_impl_nvn.hpp"
 
-MemoryBuffer::MemoryBuffer(size_t size) {
+MemoryBuffer::MemoryBuffer(size_t size)
+{
 
-    auto *bd = ImguiNvnBackend::getBackendData();
+    auto* bd = ImguiNvnBackend::getBackendData();
 
-    size_t alignedSize = ALIGN_UP(size, 0x1000);
+    size_t alignedSize = hk::alignUp(size, 0x1000);
 
     memBuffer = IM_ALLOC(alignedSize);
     memset(memBuffer, 0, alignedSize);
 
     bd->memPoolBuilder.SetDefaults()
-            .SetDevice(bd->device)
-            .SetFlags(nvn::MemoryPoolFlags::CPU_UNCACHED | nvn::MemoryPoolFlags::GPU_CACHED)
-            .SetStorage(memBuffer, alignedSize);
+        .SetDevice(bd->device)
+        .SetFlags(nvn::MemoryPoolFlags::CPU_UNCACHED | nvn::MemoryPoolFlags::GPU_CACHED)
+        .SetStorage(memBuffer, alignedSize);
 
     if (!pool.Initialize(&bd->memPoolBuilder)) {
         return;
@@ -28,19 +30,20 @@ MemoryBuffer::MemoryBuffer(size_t size) {
     mIsReady = true;
 }
 
-MemoryBuffer::MemoryBuffer(size_t size, nvn::MemoryPoolFlags flags) {
+MemoryBuffer::MemoryBuffer(size_t size, nvn::MemoryPoolFlags flags)
+{
 
-    auto *bd = ImguiNvnBackend::getBackendData();
+    auto* bd = ImguiNvnBackend::getBackendData();
 
-    size_t alignedSize = ALIGN_UP(size, 0x1000);
+    size_t alignedSize = hk::alignUp(size, 0x1000);
 
     memBuffer = IM_ALLOC(alignedSize);
     memset(memBuffer, 0, alignedSize);
 
     bd->memPoolBuilder.SetDefaults()
-            .SetDevice(bd->device)
-            .SetFlags(flags)
-            .SetStorage(memBuffer, alignedSize);
+        .SetDevice(bd->device)
+        .SetFlags(flags)
+        .SetStorage(memBuffer, alignedSize);
 
     if (!pool.Initialize(&bd->memPoolBuilder)) {
         return;
@@ -55,16 +58,17 @@ MemoryBuffer::MemoryBuffer(size_t size, nvn::MemoryPoolFlags flags) {
     mIsReady = true;
 }
 
-MemoryBuffer::MemoryBuffer(size_t size, void *bufferPtr, nvn::MemoryPoolFlags flags) {
+MemoryBuffer::MemoryBuffer(size_t size, void* bufferPtr, nvn::MemoryPoolFlags flags)
+{
 
-    auto *bd = ImguiNvnBackend::getBackendData();
+    auto* bd = ImguiNvnBackend::getBackendData();
 
     memBuffer = bufferPtr;
 
     bd->memPoolBuilder.SetDefaults()
-            .SetDevice(bd->device)
-            .SetFlags(flags)
-            .SetStorage(memBuffer, size);
+        .SetDevice(bd->device)
+        .SetFlags(flags)
+        .SetStorage(memBuffer, size);
 
     if (!pool.Initialize(&bd->memPoolBuilder)) {
         return;
@@ -79,12 +83,14 @@ MemoryBuffer::MemoryBuffer(size_t size, void *bufferPtr, nvn::MemoryPoolFlags fl
     mIsReady = true;
 }
 
-void MemoryBuffer::Finalize() {
+void MemoryBuffer::Finalize()
+{
     IM_FREE(memBuffer);
     pool.Finalize();
     buffer.Finalize();
 }
 
-void MemoryBuffer::ClearBuffer() {
+void MemoryBuffer::ClearBuffer()
+{
     memset(memBuffer, 0, pool.GetSize());
 }

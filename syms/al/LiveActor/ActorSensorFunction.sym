@@ -1,0 +1,4 @@
+@game:110
+
+_ZN2al12getHitSensorEPKNS_9LiveActorEPKc = 0x008413d0
+_ZN2al13getSensorHostEPKNS_9HitSensorE = 0x008421b0

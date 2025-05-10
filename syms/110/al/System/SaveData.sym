@@ -1,4 +1,0 @@
-_ZN2al20requestWriteSaveDataEPKcjjb = __main_start + 0x008a2650;
-_ZN2al19requestReadSaveDataEPKcjj = __main_start + 0x008a2610;
-_ZN2al18requestInitSaveDirEPKcjj = __main_start + 0x008a25d0;
-_ZN2al22updateSaveDataSequenceEv = __main_start + 0x008a2700;

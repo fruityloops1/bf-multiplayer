@@ -1,0 +1,5 @@
+@game:110
+
+_ZN13WindowConfirmC1E17WindowConfirmTypeRKN2al14LayoutInitInfoEPKc = 0x0019f9c0
+
+_ZN13WindowConfirm23appearWithSystemMessageEPKcS1_iS1_ = 0x0019fb00

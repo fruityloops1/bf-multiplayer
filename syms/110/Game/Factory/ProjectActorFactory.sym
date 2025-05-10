@@ -1,5 +1,0 @@
-_ZTV19ProjectActorFactory = __main_start + 0x01387228;
-
-_ZNK19ProjectActorFactory11convertNameEPKc = __main_start + 0x0080f050;
-
-_ZN19ProjectActorFactory13sActorEntriesE = __main_start + 0x01387240;
