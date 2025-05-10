@@ -8,15 +8,13 @@
 
 namespace nvnImGui {
 
-extern bool sDisableRender;
+    extern bool sDisableRender;
 
-typedef void (*ProcDrawFunc)();
+    typedef void (*ProcDrawFunc)();
 
-void InstallHooks();
+    void InstallHooks();
+    void InitImGui();
+    void UpdateInput();
 
-bool InitImGui();
-
-void procDraw();
-
-void addDrawFunc(ProcDrawFunc func);
+    void addDrawFunc(ProcDrawFunc func);
 }

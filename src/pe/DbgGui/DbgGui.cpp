@@ -4,6 +4,7 @@
 #include "al/Memory/MemorySystem.h"
 #include "al/Sequence/SequenceInitInfo.h"
 #include "filedevice/seadFileDeviceMgr.h"
+#include "hk/gfx/ImGuiBackendNvn.h"
 #include "hk/hook/InstrUtil.h"
 #include "hk/hook/Trampoline.h"
 #include "hk/ro/RoUtil.h"
@@ -37,6 +38,8 @@ namespace pe {
         }
 
         static void productSequenceUpdateHook(ProductSequence* sequence) {
+            nvnImGui::UpdateInput();
+
             sequence->al::Sequence::update();
 
             {
@@ -63,6 +66,8 @@ namespace pe {
             }
 
             pe::applyRomFSPatches();
+
+            nvnImGui::InitImGui();
         }
 
         HkTrampoline<void, ProductSequence*, const al::SequenceInitInfo&> productSequenceInitHook = hk::hook::trampoline([](ProductSequence* sequence, const al::SequenceInitInfo& info) {
