@@ -1,4 +1,5 @@
 #include "imgui_nvn.h"
+#include "agl/DisplayList.h"
 #include "helpers/InputHelper.h"
 #include "helpers/fsHelper.h"
 #include "hk/gfx/ImGuiBackendNvn.h"
@@ -255,7 +256,15 @@ void nvnImGui::UpdateInput() {
     }
 }
 
-static nvn::CommandHandle procDraw(nvn::CommandBuffer* cmdBuf) {
+static u32 procDraw(agl::DisplayList* thisPtr) {
+    u32 ret;
+    defer { ret = thisPtr->endDisplayList(); };
+
+    if (InputHelper::isButtonHold(nn::hid::NpadButton::ZR) && InputHelper::isButtonPress(nn::hid::NpadButton::Plus))
+        nvnImGui::sDisableRender = !nvnImGui::sDisableRender;
+
+    if (nvnImGui::sDisableRender)
+        return ret;
     ImGui::NewFrame();
 
     for (auto drawFunc : nvnImGui::drawQueue) {
@@ -263,9 +272,9 @@ static nvn::CommandHandle procDraw(nvn::CommandBuffer* cmdBuf) {
     }
 
     ImGui::Render();
-    hk::gfx::ImGuiBackendNvn::instance()->draw(ImGui::GetDrawData(), cmdBuf);
+    hk::gfx::ImGuiBackendNvn::instance()->draw(ImGui::GetDrawData(), thisPtr->mCmdBuf);
 
-    return cmdBuf->EndRecording();
+    return ret;
 }
 
 void nvnImGui::InstallHooks() {
@@ -275,7 +284,7 @@ void nvnImGui::InstallHooks() {
     disableJoyLeftState.installAtSym<"_ZN2nn3hid6detail13GetNpadStatesEPiPNS0_16NpadJoyLeftStateEiRKj">();
     disableJoyRightState.installAtSym<"_ZN2nn3hid6detail13GetNpadStatesEPiPNS0_17NpadJoyRightStateEiRKj">();
 
-    hk::hook::writeBranchLink(hk::ro::getMainModule(), 0x0075d350, procDraw); // agl::DisplayList::endDisplayList
+    hk::hook::writeBranchLink(hk::ro::getMainModule(), 0x0096bc98, procDraw); // agl::DisplayList::endDisplayList
     hk::gfx::ImGuiBackendNvn::instance()->installHooks(false);
 }
 

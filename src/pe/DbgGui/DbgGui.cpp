@@ -22,6 +22,7 @@
 #include "pe/DbgGui/Windows/RCSCamera.h"
 #include "pe/Hacks/FSHacks.h"
 #include "pe/Hacks/PlacementHolderMod.h"
+#include "pe/Hacks/Tweaks.h"
 #include "pe/Multiplayer/MultiplayerManager.h"
 #include "pe/Util/Log.h"
 #include <sead/heap/seadHeapMgr.h>
@@ -65,9 +66,10 @@ namespace pe {
                 pe::MultiplayerManager::instance()->init();
             }
 
-            pe::applyRomFSPatches();
-
+            // pe::applyRomFSPatches();
             nvnImGui::InitImGui();
+
+            installTweaksAfterInit();
         }
 
         HkTrampoline<void, ProductSequence*, const al::SequenceInitInfo&> productSequenceInitHook = hk::hook::trampoline([](ProductSequence* sequence, const al::SequenceInitInfo& info) {

@@ -158,7 +158,7 @@ namespace pe {
     }
 
     static void patchDirRecursive(const char* rootWalkPath, const char* walkPath) {
-        hk::diag::debugLog("Applying RomFS patches to %s", walkPath);
+        pe::log("Applying RomFS patches to %s", walkPath);
 
         nn::fs::DirectoryHandle dirHandle;
         sead::FormatFixedSafeString<maxPathLength>* actualWalkPath = new sead::FormatFixedSafeString<maxPathLength>("%s%s", walkPath, endsWith(walkPath, ":") ? "/" : "");
@@ -188,7 +188,6 @@ namespace pe {
                     }
 
                     pe::log("Patching %s with %s to %s", originalPath->cstr(), entryPath->cstr(), outPath->cstr());
-                    // hk::diag::debugLog("Patching %s with %s to %s", originalPath->cstr(), entryPath->cstr(), outPath->cstr());
                     createDirectoryRecursively(getParentPath(outPath->cstr()).cstr());
                     patchFile(entryPath->cstr(), originalPath->cstr(), outPath->cstr());
 

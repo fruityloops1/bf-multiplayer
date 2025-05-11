@@ -5,33 +5,32 @@
 
 #pragma once
 
-#include "types.h"
 #include "agl/gpu.h"
+#include "nvn_Cpp.h"
 #include "sead/heap/seadHeap.h"
+#include "types.h"
 
-namespace agl
-{
-    class DisplayList
-    {
+namespace agl {
+    class DisplayList {
     public:
         DisplayList();
 
         virtual ~DisplayList();
 
-        void setControlMemeory(void *, s32);
+        void setControlMemeory(void*, s32);
         void clear();
         void setBuffer(agl::GPUMemAddr<u8>, u64);
         void setValidSize(u64 size);
-        void copyTo(agl::DisplayList *) const;
+        void copyTo(agl::DisplayList*) const;
         void beginDisplayList();
-        void endDisplayList();
+        u32 endDisplayList();
         bool beginDisplayListBuffer(agl::GPUMemAddr<u8>, u64, bool);
-        void endDisplayListBuffer(sead::Heap *);
+        void endDisplayListBuffer(sead::Heap*);
         void adjustValueSize();
         void invalidateCPUCache() const;
         void dump() const;
-        bool suspend(void **);
-        void resume(void *, u64);
+        bool suspend(void**);
+        void resume(void*, u64);
         u64 calcRemainingSize();
 
         u64 _8;
@@ -43,10 +42,10 @@ namespace agl
         u32 _2C;
         u64 _30;
         u64 _38;
-        u8 _40[0x248-0x40]; // todo; what is here?
+        u8 _40[0x248 - 0x40]; // todo; what is here?
         u32 _248; // init'd to 0x200
         u32 _24C;
-        u64 _250;
+        nvn::CommandBuffer* mCmdBuf;
         char* mDisplayName; // _258
     };
 };

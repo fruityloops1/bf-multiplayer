@@ -3,3 +3,4 @@
 _ZN2al9tryGetArgEPfRKNS_13ActorInitInfoEPKc = 0x0088b1a0
 _ZN2al9tryGetArgEPbRKNS_13ActorInitInfoEPKc = 0x0088b1c0
 _ZN2al9tryGetArgEPiRKNS_13ActorInitInfoEPKc = 0x0088b180
+_ZN2al25tryGetInitFileIterAndNameEPNS_9ByamlIterEPN4sead22BufferedSafeStringBaseIcEEPKNS_8ResourceEPKcSA_SA_S8_ = 0x008406e0

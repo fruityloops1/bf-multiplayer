@@ -2,6 +2,7 @@
 
 namespace pe {
 
-void installTweaks();
+    void installTweaks();
+    void installTweaksAfterInit();
 
 } // namespace pe

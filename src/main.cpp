@@ -36,7 +36,7 @@ extern "C" void hkMain() {
         nn::socket::Initialize(pool, poolSize, 0x4000, 0xe);
     }
 
-    // singleModeSceneDtorHook.installAtOffset(hk::ro::getMainModule(), 0x003e6810);
+    singleModeSceneDtorHook.installAtOffset(hk::ro::getMainModule(), 0x003e6810);
 
     pe::initUserExceptionHandler();
     pe::installFSHacks();
