@@ -1,0 +1,13 @@
+services:
+  bf-multiplayer:
+    container_name: bf-multiplayer
+    build:
+      context: "."
+      dockerfile: Dockerfile
+    volumes:
+      - ./data/GameData.bin:/app/GameData.bin
+      - ./data/GameDataDefault.bin:/app/GameDataDefault.bin
+      - ./data/SaveData.json:/app/SaveData.json
+      - ./data/Config.json:/app/Config.json
+    ports:
+      - 7089:7089
